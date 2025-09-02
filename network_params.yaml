@@ -1,74 +1,63 @@
 participants:
+# Node 1: UGM
 # EL
   - el_type: geth
     el_image: ethereum/client-go:latest
-    el_log_level: ""
-    el_extra_env_vars: {}
     el_extra_labels: {node: ugm}
-    el_extra_params: [--ethstats=el-1-geth-prysm:supersecret123@ethstats-server:3000]
-    el_extra_mounts: {}
-    el_tolerations: []
-    el_volume_size: 0
-    el_min_cpu: 0
-    el_max_cpu: 0
-    el_min_mem: 0
-    el_max_mem: 0
+    el_extra_params: [--ethstats=ugm:supersecret123@ethstats-server:3000]
 # CL
     cl_type: prysm
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
-    cl_log_level: ""
-    cl_extra_env_vars: {}
     cl_extra_labels: {node: ugm}
-    cl_extra_params: []
-    cl_extra_mounts: {}
-    cl_tolerations: []
-    cl_volume_size: 0
-    cl_min_cpu: 0
-    cl_max_cpu: 0
-    cl_min_mem: 0
-    cl_max_mem: 0
     supernode: true
-    use_separate_vc: true
-# Validator
-    vc_type: prysm
-    vc_image: gcr.io/offchainlabs/prysm/validator:latest
-    vc_log_level: ""
-    vc_extra_env_vars: {}
-    vc_extra_labels: {}
-    vc_extra_params: []
-    vc_extra_mounts: {}
-    vc_tolerations: []
-    vc_min_cpu: 0
-    vc_max_cpu: 0
-    vc_min_mem: 0
-    vc_max_mem: 0
-    validator_count: null
-    use_remote_signer: false
-# Remote signer
-    remote_signer_type: web3signer
-    remote_signer_image: consensys/web3signer:latest
-    remote_signer_extra_env_vars: {}
-    remote_signer_extra_labels: {}
-    remote_signer_extra_params: []
-    remote_signer_tolerations: []
-    remote_signer_min_cpu: 0
-    remote_signer_max_cpu: 0
-    remote_signer_min_mem: 0
-    remote_signer_max_mem: 0
-# participant specific
-    node_selectors: {}
-    tolerations: []
-    count: 1
-    snooper_enabled: false
-    ethereum_metrics_exporter_enabled: false
-    xatu_sentry_enabled: false
-    prometheus_config:
-      scrape_interval: 15s
-      labels: {}
-    blobber_enabled: false
-    blobber_extra_params: []
-    builder_network_params: null
-    keymanager_enabled: false
+
+# Node 2: UNY
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: uny}
+    el_extra_params: [--ethstats=uny:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: uny}
+    supernode: true
+
+# Node 3: UPN
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: upn}
+    el_extra_params: [--ethstats=upn:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: upn}
+    supernode: true
+
+# Node 4: UIN
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: uin}
+    el_extra_params: [--ethstats=uin:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: uin}
+    supernode: true
+
+# Node 5: UII
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: uii}
+    el_extra_params: [--ethstats=uii:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: uii}
+    supernode: true
 
 network_params:
   network: kurtosis
