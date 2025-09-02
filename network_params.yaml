@@ -1,63 +1,123 @@
 participants:
-# Node 1: UGM
+# Node 1: Universitas Gadjah Mada
 # EL
   - el_type: geth
     el_image: ethereum/client-go:latest
-    el_extra_labels: {node: ugm}
-    el_extra_params: [--ethstats=ugm:supersecret123@ethstats-server:3000]
+    el_extra_labels: {node: UGM}
+    el_extra_params: [--ethstats=UGM:supersecret123@ethstats-server:3000]
 # CL
     cl_type: prysm
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
-    cl_extra_labels: {node: ugm}
+    cl_extra_labels: {node: UGM}
     supernode: true
 
-# Node 2: UNY
+# Node 2: Institut Teknologi Bandung
 # EL
   - el_type: geth
     el_image: ethereum/client-go:latest
-    el_extra_labels: {node: uny}
-    el_extra_params: [--ethstats=uny:supersecret123@ethstats-server:3000]
+    el_extra_labels: {node: ITB}
+    el_extra_params: [--ethstats=ITB:supersecret123@ethstats-server:3000]
 # CL
     cl_type: prysm
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
-    cl_extra_labels: {node: uny}
+    cl_extra_labels: {node: ITB}
     supernode: true
 
-# Node 3: UPN
+# Node 3: Universitas Indonesia
 # EL
   - el_type: geth
     el_image: ethereum/client-go:latest
-    el_extra_labels: {node: upn}
-    el_extra_params: [--ethstats=upn:supersecret123@ethstats-server:3000]
+    el_extra_labels: {node: UI}
+    el_extra_params: [--ethstats=UI:supersecret123@ethstats-server:3000]
 # CL
     cl_type: prysm
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
-    cl_extra_labels: {node: upn}
+    cl_extra_labels: {node: UI}
     supernode: true
 
-# Node 4: UIN
+# Node 4: Universitas Brawijaya
 # EL
   - el_type: geth
     el_image: ethereum/client-go:latest
-    el_extra_labels: {node: uin}
-    el_extra_params: [--ethstats=uin:supersecret123@ethstats-server:3000]
+    el_extra_labels: {node: UB}
+    el_extra_params: [--ethstats=UB:supersecret123@ethstats-server:3000]
 # CL
     cl_type: prysm
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
-    cl_extra_labels: {node: uin}
+    cl_extra_labels: {node: UB}
     supernode: true
 
-# Node 5: UII
+# Node 5: Institut Teknologi Sepuluh November
 # EL
   - el_type: geth
     el_image: ethereum/client-go:latest
-    el_extra_labels: {node: uii}
-    el_extra_params: [--ethstats=uii:supersecret123@ethstats-server:3000]
+    el_extra_labels: {node: ITS}
+    el_extra_params: [--ethstats=ITS:supersecret123@ethstats-server:3000]
 # CL
     cl_type: prysm
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
-    cl_extra_labels: {node: uii}
+    cl_extra_labels: {node: ITS}
     supernode: true
+
+# Node 6: Universitas Negeri Medan
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: UNIMED}
+    el_extra_params: [--ethstats=UNIMED:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: UNIMED}
+    supernode: false
+
+# Node 7: Universitas Udayana
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: UNUD}
+    el_extra_params: [--ethstats=UNUD:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: UNUD}
+    supernode: false
+
+# Node 8: Universitas Gunadarma
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: Gundar}
+    el_extra_params: [--ethstats=Gundar:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: Gundar}
+    supernode: false
+
+# Node 9: Universitas Terbuka
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: UT}
+    el_extra_params: [--ethstats=UT:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: UT}
+    supernode: false
+
+# Node 10: Universitas Diponegoro
+# EL
+  - el_type: geth
+    el_image: ethereum/client-go:latest
+    el_extra_labels: {node: UNDIP}
+    el_extra_params: [--ethstats=UNDIP:supersecret123@ethstats-server:3000]
+# CL
+    cl_type: prysm
+    cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
+    cl_extra_labels: {node: UNDIP}
+    supernode: false
 
 network_params:
   network: kurtosis
