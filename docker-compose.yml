@@ -1,0 +1,16 @@
+services:
+  ethstats-server:
+    build:
+      context: https://github.com/goerli/ethstats-server.git
+    container_name: ethstats-server
+    environment:
+      WS_SECRET: "supersecret123"
+    ports:
+      - "3000:3000"
+    networks:
+      - kt-dchain-pos
+    restart: unless-stopped
+
+networks:
+  kt-dchain-pos:
+    external: true
