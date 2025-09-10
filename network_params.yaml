@@ -10,6 +10,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UGM}
     supernode: true
+    validator_count: 1
 
 # Node 2: Institut Teknologi Bandung
 # EL
@@ -22,6 +23,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: ITB}
     supernode: true
+    validator_count: 1
 
 # Node 3: Universitas Indonesia
 # EL
@@ -34,6 +36,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UI}
     supernode: true
+    validator_count: 1
 
 # Node 4: Universitas Brawijaya
 # EL
@@ -46,6 +49,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UB}
     supernode: true
+    validator_count: 1
 
 # Node 5: Institut Teknologi Sepuluh November
 # EL
@@ -58,6 +62,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: ITS}
     supernode: true
+    validator_count: 1
 
 # Node 6: Universitas Negeri Medan
 # EL
@@ -70,6 +75,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UNIMED}
     supernode: false
+    validator_count: 0
 
 # Node 7: Universitas Udayana
 # EL
@@ -82,6 +88,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UNUD}
     supernode: false
+    validator_count: 0
 
 # Node 8: Universitas Gunadarma
 # EL
@@ -94,6 +101,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: Gundar}
     supernode: false
+    validator_count: 0
 
 # Node 9: Universitas Terbuka
 # EL
@@ -106,6 +114,7 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UT}
     supernode: false
+    validator_count: 0
 
 # Node 10: Universitas Diponegoro
 # EL
@@ -118,13 +127,14 @@ participants:
     cl_image: gcr.io/offchainlabs/prysm/beacon-chain:latest
     cl_extra_labels: {node: UNDIP}
     supernode: false
+    validator_count: 0
 
 network_params:
   network: kurtosis
   network_id: "3151908"
   deposit_contract_address: "0x00000000219ab540356cBB839Cbe05303d7705Fa"
   seconds_per_slot: 12
-  num_validator_keys_per_node: 64
+  num_validator_keys_per_node: 1
   preregistered_validator_keys_mnemonic:
     "giant issue aisle success illegal bike spike
     question tent bar rely arctic volcano long crawl hungry vocal artwork sniff fantasy
@@ -173,7 +183,7 @@ network_params:
   bpo_5_max_blobs: 0
   bpo_5_target_blobs: 0
   bpo_5_base_fee_update_fraction: 0
-  withdrawal_type: "0x00"
+  withdrawal_type: "0x01"
   withdrawal_address: "0x8943545177806ED17B9F23F0a21ee5948eCaa776"
   validator_balance: 32
   min_epochs_for_data_column_sidecars_requests: 4096
